@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TessaEsman_hw4TH_csi3150_w2024</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Link to JS -->
+    <script src="./js/index.js" defer></script>
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!--Navbar-->
+      <nav class="navbar">
+        <h3 class="logo">
+          <a href="#">
+            <h1>
+              Esman <span><i class="bx bxs-car-mechanic"></i></span> Auto
+            </h1>
+          </a>
+        </h3>
+
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <button class="login-btn">Log In</button>
+      </nav>
+
+      <!-- Search box -->
+      <div class="container">
+        <div class="search-box">
+          <form id="search-form">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search your dream car..."
+            />
+            <button type="submit" class="search-btn">Search</button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <div class="filters">
+      <label for="minYear">Min. Year:</label>
+      <select id="minYear">
+        <option value="0">None</option>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+        <option value="2015">2015</option>
+      </select>
+
+      <label for="maxYear">Max. Year:</label>
+      <select id="maxYear">
+        <option value="9999">None</option>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+        <option value="2015">2015</option>
+      </select>
+
+      <label for="make">Make:</label>
+      <select id="make">
+        <option value="">All</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Honda">Honda</option>
+        <option value="Ford">Ford</option>
+        <option value="Chevrolet">Chevrolet</option>
+        <option value="Nissan">Nissan</option>
+        <!-- Add more options -->
+      </select>
+
+      <label for="minPrice">Min. Price:</label>
+      <select id="minPrice">
+        <option value="0">None</option>
+        <option value="5000">$5000</option>
+        <option value="10000">$10000</option>
+        <option value="15000">$15000</option>
+        <option value="20000">$20000</option>
+        <option value="25000">$25000</option>
+        <option value="30000">$30000</option>
+        <option value="35000">$35000</option>
+        <option value="40000">$40000</option>
+        <option value="45000">$45000</option>
+        <option value="50000">$50000</option>
+        <option value="55000">$55000</option>
+        <option value="60000">$60000</option>
+        <option value="65000">$65000</option>
+      </select>
+
+      <label for="maxPrice">Max. Price:</label>
+      <select id="maxPrice">
+        <option value="999999999">None</option>
+        <option value="25000">$25000</option>
+        <option value="20000">$20000</option>
+        <option value="15000">$15000</option>
+        <option value="10000">$10000</option>
+        <option value="5000">$5000</option>
+      </select>
+
+      <label for="maxMileage">Max. Mileage:</label>
+      <select id="maxMileage">
+        <option value="99999999">None</option>
+        <option value="10000">Under 10000</option>
+        <option value="20000">Under 20000</option>
+        <option value="30000">Under 30000</option>
+        <option value="40000">Under 40000</option>
+        <option value="50000">Under 50000</option>
+        <option value="60000">Under 60000</option>
+
+        <!-- Add more options as needed -->
+      </select>
+
+      <label for="color">Color:</label>
+      <select id="color">
+        <option value="">Any</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Black">Black</option>
+        <option value="Silver">Silver</option>
+        <option value="White">White</option>
+        <!-- Add more options -->
+      </select>
+
+      <button onclick="applyFilters()">Apply Filters</button>
+    </div>
+
+    <div id="carListings">
+          <!-- Car listings will be displayed here -->
+    </div>
+      
+
+    <script src="script.js"></script>
+
+    <footer>
+      <div></div>
+    </footer>
+  </body>
+</html>
